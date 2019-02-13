@@ -41,13 +41,6 @@ export class Home extends Component {
                   </tr>
                 ))}
               </Table>
-              <ul>
-                {this.state.tracks.map(item => (
-                  <li>
-                    <h6 className="title is-6"><span>{item[0]}</span> - {item[1]}</h6>
-                  </li>
-                ))}
-              </ul>
             </Content>
           </Card.Content>
         </Card>
