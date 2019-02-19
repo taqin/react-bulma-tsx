@@ -16,10 +16,12 @@ export class Home extends Component {
   componentDidMount = () => {
 
     axios
-      .get('https://api.exchangeratesapi.io/latest?base=USD')
+      .get('http://localhost:3000/api/q')
       .then(res => {
-        const feed = res.data.rates;
-        const tracks = Object.entries(feed);
+        const feed = res.data;
+        const tracks = Object.values(feed);
+
+        console.log(tracks)
         this.setState({ tracks }); //set as a callback
       });
   }
@@ -32,14 +34,14 @@ export class Home extends Component {
             <Columns>
               <Columns.Column className="is-10 is-offset-1">
                 <Box className="content box-listing">
-                  {this.state.tracks.map(item => (
+                  {this.state.tracks.map((item, index) => (
                   <article id="" className="post">
-                    <Columns className=" is-mobile singleTrack">
+                    <Columns className="is-mobile singleTrack">
                       <Columns.Column className="num is-1-mobile is-mobile">
-                        <span className="trackNum">1.</span>
+                        <span className="trackNum">{index+1}.</span>
                       </Columns.Column>
                       <Columns.Column className="is-paddingless">
-                        <h4 className="trackTitle"><a href="/q/#" className="has-text-black-bis">{item[0]} - {item[1]}</a></h4>
+                        <h4 className="trackTitle"><a href={'/q/' + item.meta.slug } className="has-text-black-bis">{item.title}</a></h4>
                       </Columns.Column>
                     </Columns>
 
