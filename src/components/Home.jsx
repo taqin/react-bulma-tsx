@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-import { Card, Content, Table } from 'react-bulma-components/full';
+
+import { Article, Box, Container, Section, Columns, Card, Content, Table, Tag } from 'react-bulma-components/full';
 
 export class Home extends Component {
   
@@ -26,24 +27,45 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <Card>
-          <Card.Content>
-            <Content>
-              <h1 className="is-size-1 has-text-weight-light is-uppercase">
-                Hello Universe Bulma!
-              </h1>
-              <Table>
-                {this.state.tracks.map(item => (
-                  <tr>
-                    <td>
-                      <h6 className="title is-6"><span>{item[0]}</span> - {item[1]}</h6>
-                    </td>
-                  </tr>
-                ))}
-              </Table>
-            </Content>
-          </Card.Content>
-        </Card>
+        <Section className="main-listing">
+          <Container>          
+            <Columns>
+              <Columns.Column className="is-10 is-offset-1">
+                <Box className="content box-listing">
+                  {this.state.tracks.map(item => (
+                  <article id="" className="post">
+                    <Columns className=" is-mobile singleTrack">
+                      <Columns.Column className="num is-1-mobile is-mobile">
+                        <span className="trackNum">1.</span>
+                      </Columns.Column>
+                      <Columns.Column className="is-paddingless">
+                        <h4 className="trackTitle"><a href="/q/#" className="has-text-black-bis">{item[0]} - {item[1]}</a></h4>
+                      </Columns.Column>
+                    </Columns>
+
+                    <Columns className="is-mobile">
+                      <Columns.Column className="is-half-mobile is-three-fifths-desktop">
+                        <Tag>
+                          <a href="#"><span class="tag">Tag</span></a>
+                        </Tag>
+                      </Columns.Column>
+                      <Columns.Column className="is-half-mobile is-two-fifths-desktop">
+                        <div className="buttons is-pulled-right">
+                          <a class="trackUrl button is-small is-primary" href="#">Download MP3</a>
+                          <a class="btn-trigger button is-link is-small" onclick="launchModal(this)" data-target="modal">Listen</a>
+                        </div>
+                      </Columns.Column>
+                      
+                    </Columns>
+                      
+                  </article>
+                  ))}
+                </Box>
+              </Columns.Column>
+            </Columns>
+          </Container>
+        </Section>
+
       </div>
     );
   }

@@ -7,7 +7,7 @@ export class Navigation extends Component {
   render() {
     return (
       <div>
-        <Navbar>
+        <Navbar className="is-fixed-top is-white">
           <Navbar.Brand>
             <Navbar.Item renderAs="a" href="#">
               <img

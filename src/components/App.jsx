@@ -5,6 +5,8 @@ import { Container } from 'react-bulma-components/full';
 import Navigation from "./Navigation";
 import Home from './Home';
 
+import '../styles/App.scss';
+
 class App extends Component {
   render() {
     return (
