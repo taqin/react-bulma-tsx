@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Route, Link } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+
 import { Section } from 'react-bulma-components/full';
 import { Container } from 'react-bulma-components/full';
 
@@ -10,14 +13,11 @@ import '../styles/App.scss';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navigation />  
-        <Section>
-          <Container>
-            <Home />
-          </Container>
-        </Section>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path='/' component={Home}></Route>
+        </div>
+      </BrowserRouter>
     );
   }
 }

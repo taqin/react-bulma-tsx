@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-
 import { Article, Box, Container, Section, Columns, Card, Content, Table, Tag } from 'react-bulma-components/full';
 
 export class Home extends Component {
