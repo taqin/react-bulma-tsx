@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Navbar } from 'react-bulma-components/full';
 
 const open = false;
@@ -9,7 +9,7 @@ export class Navigation extends Component {
       <div>
         <Navbar className="is-fixed-top is-white">
           <Navbar.Brand>
-            <Navbar.Item renderAs="a" href="#">
+            <Navbar.Item renderAs="a" href="./">
               <img
                 src="https://bulma.io/images/bulma-logo.png"
                 alt="Bulma: a modern CSS framework based on Flexbox"
@@ -17,9 +17,9 @@ export class Navigation extends Component {
                 height="28"
               />
             </Navbar.Item>
-            <Navbar.Burger/>
+            <Navbar.Burger />
           </Navbar.Brand>
-          
+
           <Navbar.Menu>
             <Navbar.Container>
               <Navbar.Item href="#">Second</Navbar.Item>
@@ -28,10 +28,9 @@ export class Navigation extends Component {
               <Navbar.Item href="#">At the end</Navbar.Item>
             </Navbar.Container>
           </Navbar.Menu>
-
         </Navbar>
       </div>
-    )
+    );
   }
 }
 

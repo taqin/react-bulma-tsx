@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Link } from "react-router";
-import { BrowserRouter } from "react-router-dom";
+import { Route, Link } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Section } from 'react-bulma-components/full';
-import { Container } from 'react-bulma-components/full';
-
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 import Home from './Home';
+import Track from './Track';
 
 import '../styles/App.scss';
 
@@ -15,7 +13,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path='/' component={Home}></Route>
+          <Navigation />
+          <Route exact path="/" component={Home} />
+          <Route path="/q/:trackId" component={Track} />
         </div>
       </BrowserRouter>
     );

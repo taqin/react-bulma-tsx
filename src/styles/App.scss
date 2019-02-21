@@ -1,5 +1,5 @@
 body {
-  background: #EEE;
+  background: #eee;
 }
 .add {
   height: 20px;
@@ -16,8 +16,8 @@ body {
   background-color: rgba(10, 10, 10, 0.5);
 }
 .add:before {
-  background: #FFF;
-  content: "";
+  background: #fff;
+  content: '';
   width: 50%;
   height: 2px;
   left: 50%;
@@ -27,8 +27,8 @@ body {
   transform-origin: center;
 }
 .add:after {
-  background: #FFF;
-  content: "";
+  background: #fff;
+  content: '';
   height: 50%;
   width: 2px;
   left: 50%;
@@ -38,7 +38,7 @@ body {
   transform-origin: center;
 }
 .navbar {
-  background: #DDD;
+  background: #ddd;
 }
 .hero-body {
   padding: 0;
@@ -68,15 +68,15 @@ body {
 }
 
 .listing {
-  background: #FFF;
-  border-bottom: 1px solid #DDD;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
   padding: 10px;
   margin: 0;
 }
 article.post {
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #E6EAEE;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6eaee;
 }
 .content h3 {
   margin-bottom: 0;
@@ -98,46 +98,46 @@ article.post {
   font-weight: bold;
   font-size: 1.5rem;
 }
-.question-wrap::before, {
-    background: #ffdd57;
-    border-radius: 2px 2px 0 0;
-    bottom: 100%;
-    color: rgba(0,0,0,.7);
-    content: "Question";
-    display: inline-block;
-    font-size: 7px;
-    font-weight: 700;
-    left: -1px;
-    letter-spacing: 1px;
-    margin-left: -1px;
-    padding: 3px 5px;
-    position: absolute;
-    text-transform: uppercase;
-    vertical-align: top;
+.question-wrap::before {
+  background: #ffdd57;
+  border-radius: 2px 2px 0 0;
+  bottom: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  content: 'Question';
+  display: inline-block;
+  font-size: 7px;
+  font-weight: 700;
+  left: -1px;
+  letter-spacing: 1px;
+  margin-left: -1px;
+  padding: 3px 5px;
+  position: absolute;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 .answer-wrap {
   position: relative;
   border: 1px solid #def0ff;
 }
-.answer-wrap::before, {
-    background: #57b3ff;
-    border-radius: 2px 2px 0 0;
-    bottom: 100%;
-    color: rgba(0,0,0,.7);
-    content: "Answer";
-    display: inline-block;
-    font-size: 7px;
-    font-weight: 700;
-    left: -1px;
-    letter-spacing: 1px;
-    margin-left: -1px;
-    padding: 3px 5px;
-    position: absolute;
-    text-transform: uppercase;
-    vertical-align: top;
+.answer-wrap::before {
+  background: #57b3ff;
+  border-radius: 2px 2px 0 0;
+  bottom: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  content: 'Answer';
+  display: inline-block;
+  font-size: 7px;
+  font-weight: 700;
+  left: -1px;
+  letter-spacing: 1px;
+  margin-left: -1px;
+  padding: 3px 5px;
+  position: absolute;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 .modal-card-head {
-  background-color: #FFF;
+  background-color: #fff;
   border-bottom: 0;
   padding: 10px 20px;
   .modal-card-title {
@@ -163,6 +163,8 @@ article.post {
   margin-top: 70px;
 }
 .table.is-hoverable.is-striped tbody tr:not(.is-selected):hover,
-.table.is-hoverable.is-striped tbody tr:not(.is-selected):hover:nth-child(even) {
+.table.is-hoverable.is-striped
+  tbody
+  tr:not(.is-selected):hover:nth-child(even) {
   background-color: hsl(48, 100%, 67%);
 }
