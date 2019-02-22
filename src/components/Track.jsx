@@ -18,10 +18,11 @@ export class Track extends Component {
   }
 
   componentDidMount = () => {
-    const media = this.props.match.params.trackId;
-    console.log(media);
+    const media = this.props.match.params.trackId.slice(-6);
+    console.log(media.slice(-6));
     axios.get(`http://localhost:3000/api/q/${media}`).then(res => {
       const track = res.data;
+      console.log(track);
       this.setState({ track }); //set as a callback
     });
   };

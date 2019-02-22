@@ -28,14 +28,10 @@ export class Home extends Component {
   };
 
   clickTrack = (a, b) => {
-    this.props.history.push(`/q/${a}`,{media: b});
+    this.props.history.push(`/q/${a}-${b}`,{media: b});
   };
 
   render() {
-    const trackDetails = {
-      id: '',
-      mediaUrl: ''
-    };
     return (
       <div>
         <Section className="main-listing">
@@ -57,7 +53,7 @@ export class Home extends Component {
                               onClick={() =>
                                 this.clickTrack(
                                   item.meta.slug,
-                                  item.mediaId
+                                  item.id
                                 )
                               }
                             >
